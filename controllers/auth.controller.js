@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { User } from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
-import { useReducer } from 'react';
+
 
 export const signup = async (req, res) => {
     try {
