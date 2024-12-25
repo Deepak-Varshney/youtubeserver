@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js", 
+    "dev": "nodemon index.js", 
+    "build": "echo 'No build process needed'"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Backend server for my application",
   "dependencies": {
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
@@ -18,7 +19,9 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.9.2",
+    "mongoose": "^8.9.2"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.9"
   }
 }
