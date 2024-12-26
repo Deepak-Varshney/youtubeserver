@@ -31,7 +31,7 @@ export const signin = async (req, res) => {
         const { username, password } = req.body; // username can be either username or email
         const user = await User.findOne({ $or: [{ username: username }, { email: username }] });
         if (user && await bcrypt.compare(password, user.password)) {
-            const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+            const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET || "JWT_SECRETELKJSLDJFKSJDF");
             res.cookie('token', token);
             const { password, ...others } = user._doc;
             res.status(200).json({ message: "User has been logged in successfully", success: "Yes", token, others, user });
