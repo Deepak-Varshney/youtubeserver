@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(cors(
     {
-        origin: '*', // Allow all origins
+        origin: 'https://youtubefrontend-seven.vercel.app', // Allow all origins
         credentials: true, // Enable credentials (cookies, etc.)
     }
 ));
